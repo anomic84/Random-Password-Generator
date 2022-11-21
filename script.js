@@ -35,62 +35,39 @@ function generatePassword() {
     const symbolList = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64)).concat(arrayFromLowToHigh(91, 96)).concat(arrayFromLowToHigh(65, 90))
     const lowercaseList = arrayFromLowToHigh(97, 122)
     const uppercaseList = arrayFromLowToHigh(65, 90)
-    const password = generatePassword(userWantsNumbers, userWantsSymbols, userWantsLowercase, userWantsUppercase){
-        if (userWantsNumbers) cha
+
+    if (userWantsNumbers) {
+        for (let i = 0; i < numberList.length; i++) {
+            template.push(numberList[i]);
+        }
+    }
+
+    if (userWantsSymbols) {
+        for (let i = 0; i < symbolList.length; i++) {
+            template.push(symbolList[i]);
+        }
+    }
+
+    if (userWantsLowercase) {
+        for (let i = 0; i < lowercaseList.length; i++) {
+            template.push(lowercaseList[i]);
+        }ok this 
+    }
+
+    if (userWantsUppercase) {
+        for (let i = 0; i < uppercaseList.length; i++) {
+            template.push(uppercaseList[i]);
+        }
+    }
+
+    let password = '';
+
+    for (let i = 0; i < passwordLength; i++) {
+        password += String.fromCharCode((getRandomItem(template)));
+    }
+    return password;
+
 }
-
-// ---------------------conditional statements if, if else's, and finally last if else "please pick one password variable"-------------------/
-
-
-//T T T T
-if ()
-
-//T T T F
-
-//T T F F
-
-//T F F F
-
-//T F T F
-
-//T F T T
-
-//T F F T
-
-//T T F T
-
-//F F F F
-
-//F F F T
-
-//F F T T
-
-//F T T T
-
-//F T F T
-
-//F T F F
-
-//F T T F
-
-//F F T F
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function arrayFromLowToHigh(low, high) {
     const array = []
