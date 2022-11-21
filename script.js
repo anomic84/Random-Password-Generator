@@ -36,6 +36,8 @@ function generatePassword() {
     const lowercaseList = arrayFromLowToHigh(97, 122)
     const uppercaseList = arrayFromLowToHigh(65, 90)
 
+    const template = [];
+
     if (userWantsNumbers) {
         for (let i = 0; i < numberList.length; i++) {
             template.push(numberList[i]);
@@ -51,7 +53,7 @@ function generatePassword() {
     if (userWantsLowercase) {
         for (let i = 0; i < lowercaseList.length; i++) {
             template.push(lowercaseList[i]);
-        }ok this 
+        }
     }
 
     if (userWantsUppercase) {
@@ -77,7 +79,7 @@ function arrayFromLowToHigh(low, high) {
     return array
 }
 
-var optionsCart = []
+// var optionsCart = []
 
 // const password = generatePassword(userWantsNumbers, userWantsSymbols, userWantsLowercase, userWantsUppercase){
 //     if (userWantsNumbers) cha
@@ -87,32 +89,32 @@ var optionsCart = []
 //     uppercaseList[i] = lowercaseList[i].toUpperCase()
 // }
 
-if (userWantsNumbers === true) {
-    optionsCart.push(numberList)
-}
+// if (userWantsNumbers === true) {
+//     optionsCart.push(numberList)
+// }
 
-if (userWantsSymbols === true) {
-    optionsCart.push(symbolList)
-}
+// if (userWantsSymbols === true) {
+//     optionsCart.push(symbolList)
+// }
 
-if (userWantsLowercase === true) {
-    optionsCart.push(lowercaseList)
-}
+// if (userWantsLowercase === true) {
+//     optionsCart.push(lowercaseList)
+// }
 
-if (userWantsUppercase === true) {
-    optionsCart.push(uppercaseList)
-}
+// if (userWantsUppercase === true) {
+//     optionsCart.push(uppercaseList)
+// }
 
-var generatedPassword = ""
+// var generatedPassword = ""
 
-for (var i = 0; i < passwordLength; i++) {
-    var randomList = getRandomItem(optionsCart)
-    var randomChar = getRandomItem(randomList)
-    console.log(randomChar)
-}
+// for (var i = 0; i < passwordLength; i++) {
+//     var randomList = getRandomItem(optionsCart)
+//     var randomChar = getRandomItem(randomList)
+//     console.log(randomChar)
+// }
 
 
-}
+// }
 
 
 
