@@ -31,40 +31,109 @@ function generatePassword() {
     var userWantsLowercase = window.confirm("Would you like to include lowercase letters in your password?")
     var userWantsUppercase = window.confirm("Would you like to include uppercase letters in your password?")
 
-    var numberList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    var symbolList = ["!", "@", "#", "$", "%", "^", "&", "*"]
-    var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",]
-    var uppercaseList = []
+    const numberList = arrayFromLowToHigh(48, 57)
+    const symbolList = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64)).concat(arrayFromLowToHigh(91, 96)).concat(arrayFromLowToHigh(65, 90))
+    const lowercaseList = arrayFromLowToHigh(97, 122)
+    const uppercaseList = arrayFromLowToHigh(65, 90)
+    const password = generatePassword(userWantsNumbers, userWantsSymbols, userWantsLowercase, userWantsUppercase){
+        if (userWantsNumbers) cha
+}
 
-    var optionsCart = []
+// ---------------------conditional statements if, if else's, and finally last if else "please pick one password variable"-------------------/
 
-    for (var i = 0; i < lowercaseList.length; i++) {
-        uppercaseList[i] = lowercaseList[i].toUpperCase()
+
+//T T T T
+if ()
+
+//T T T F
+
+//T T F F
+
+//T F F F
+
+//T F T F
+
+//T F T T
+
+//T F F T
+
+//T T F T
+
+//F F F F
+
+//F F F T
+
+//F F T T
+
+//F T T T
+
+//F T F T
+
+//F T F F
+
+//F T T F
+
+//F F T F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function arrayFromLowToHigh(low, high) {
+    const array = []
+    for (let i = low; i <= high; i++) {
+        array.push(i)
     }
+    return array
+}
 
-    if (userWantsNumbers === true) {
-        optionsCart.push(numberList)
-    }
+var optionsCart = []
 
-    if (userWantsSymbols === true) {
-        optionsCart.push(symbolList)
-    }
+// const password = generatePassword(userWantsNumbers, userWantsSymbols, userWantsLowercase, userWantsUppercase){
+//     if (userWantsNumbers) cha
+// }
 
-    if (userWantsLowercase === true) {
-        optionsCart.push(lowercaseList)
-    }
+// for (var i = 0; i < lowercaseList.length; i++) {
+//     uppercaseList[i] = lowercaseList[i].toUpperCase()
+// }
 
-    if (userWantsUppercase === true) {
-        optionsCart.push(uppercaseList)
-    }
+if (userWantsNumbers === true) {
+    optionsCart.push(numberList)
+}
 
-    var generatedPassword = ""
+if (userWantsSymbols === true) {
+    optionsCart.push(symbolList)
+}
 
-    for (var i = 0; i < passwordLength; i++) {
-        var randomList = getRandomItem(optionsCart)
-        var randomChar = getRandomItem(randomList)
-        console.log(randomChar)
-    }
+if (userWantsLowercase === true) {
+    optionsCart.push(lowercaseList)
+}
+
+if (userWantsUppercase === true) {
+    optionsCart.push(uppercaseList)
+}
+
+var generatedPassword = ""
+
+for (var i = 0; i < passwordLength; i++) {
+    var randomList = getRandomItem(optionsCart)
+    var randomChar = getRandomItem(randomList)
+    console.log(randomChar)
+}
+
 
 }
 
