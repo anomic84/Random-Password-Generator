@@ -79,45 +79,6 @@ function arrayFromLowToHigh(low, high) {
     return array
 }
 
-// var optionsCart = []
-
-// const password = generatePassword(userWantsNumbers, userWantsSymbols, userWantsLowercase, userWantsUppercase){
-//     if (userWantsNumbers) cha
-// }
-
-// for (var i = 0; i < lowercaseList.length; i++) {
-//     uppercaseList[i] = lowercaseList[i].toUpperCase()
-// }
-
-// if (userWantsNumbers === true) {
-//     optionsCart.push(numberList)
-// }
-
-// if (userWantsSymbols === true) {
-//     optionsCart.push(symbolList)
-// }
-
-// if (userWantsLowercase === true) {
-//     optionsCart.push(lowercaseList)
-// }
-
-// if (userWantsUppercase === true) {
-//     optionsCart.push(uppercaseList)
-// }
-
-// var generatedPassword = ""
-
-// for (var i = 0; i < passwordLength; i++) {
-//     var randomList = getRandomItem(optionsCart)
-//     var randomChar = getRandomItem(randomList)
-//     console.log(randomChar)
-// }
-
-
-// }
-
-
-
 // Write password to the #password input
 function writePassword() {
     var password = generatePassword();
