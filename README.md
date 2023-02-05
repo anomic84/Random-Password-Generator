@@ -1,5 +1,4 @@
 # Random Password Generator
-Challege Week 3: Random Password Generator
 
 ## Description
 Using JavaScript functions to make a compatible password generator at random
